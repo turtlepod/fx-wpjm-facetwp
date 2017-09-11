@@ -10,4 +10,4 @@
 
 <?php else :
 	do_action( 'job_manager_output_jobs_no_results' );
-endif;
+endif; ?>

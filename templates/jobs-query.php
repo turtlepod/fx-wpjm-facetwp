@@ -6,6 +6,6 @@ return array(
 		'date'         => 'DESC',
 	),
 	'order'          => 'asc',
-	'posts_per_page' => 3,
-	'post_status'    => 'publish'
+	'posts_per_page' => get_option( 'job_manager_per_page', 10 ),
+	'post_status'    => 'publish',
 );

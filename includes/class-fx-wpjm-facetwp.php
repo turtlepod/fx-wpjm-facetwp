@@ -37,6 +37,11 @@ class fx_WPJM_FacetWP {
 
 		// Output.
 		add_filter( 'job_manager_job_listings_output', ( array( $this, 'jobs_output' ) ) );
+
+		// Add [fx-wpjm-facetwp-filters] shortcode/
+		add_action( 'init', function() {
+			add_shortcode( 'fx-wpjm-facetwp-filters', array( $this, 'filters_shortcode' ) );
+		} );
 	}
 
 
@@ -122,15 +127,17 @@ class fx_WPJM_FacetWP {
 		return ob_get_clean();
 	}
 
+	/**
+	 * Filters Shortcode for use in other pages.
+	 * Shortcode tag [fx-wpjm-facetwp-filters].
+	 *
+	 * @since 1.0.0
+	 */
+	public function filters_shortcode() {
+		ob_start();
+		require_once( FX_WPJM_FACETWP_PATH . 'templates/filters.php' );
+		return ob_get_clean();
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
 

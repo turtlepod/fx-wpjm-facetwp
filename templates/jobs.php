@@ -2,11 +2,10 @@
 /**
  * [jobs] Shortcode Output.
  *
- * @since 4.0.0
- * @version 4.0.0
+ * @since 1.0.0
  */
 ?>
-<div class="facetwp-search_jobs search_jobs">
+<div class="fx-wpjm-facetwp-search_jobs search_jobs">
 	<?php echo facetwp_display( 'facet', 'fx_wpjm_facetwp_keywords' ); ?>
 	<?php echo facetwp_display( 'facet', 'fx_wpjm_facetwp_job_category' ); ?>
 	<?php echo facetwp_display( 'facet', 'fx_wpjm_facetwp_job_location' ); ?>
